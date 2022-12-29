@@ -1,0 +1,14 @@
+Resources :
+  MyInstnce:
+     Type: AWS::EC2::Instance
+      Properties:
+         InstnceType: t2.micro
+          ImageId: ami-o36392654074t
+          Tags:
+            -Key: "Name"
+             Value: !Join  
+                - " "
+                - - "My Instance in"
+                  - !Ref AES::Region
+                  
+          
